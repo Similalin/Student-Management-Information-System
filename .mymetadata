@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="javaxc"
+  id="myeclipse.1384625361592"
+  context-root="/javaxc"
+  j2ee-spec="5.0"
+  archive="javaxc.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

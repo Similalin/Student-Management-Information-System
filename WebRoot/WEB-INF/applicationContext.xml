@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.cj.jdbc.Driver">
+		</property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/db_javaxc?characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=UTC&amp;rewriteBatchedStatements=true">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="12345678"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.SQLServerDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/model/TAdmin.hbm.xml</value>
+			    <value>com/model/TLiuyan.hbm.xml</value>
+			    <value>com/model/TGonggao.hbm.xml</value>
+			    <value>com/model/TTea.hbm.xml</value>
+				<value>com/model/TStu.hbm.xml</value>
+				<value>com/model/TDoc.hbm.xml</value>
+				<value>com/model/TShipin.hbm.xml</value>
+				<value>com/model/TZuoyet.hbm.xml</value>
+				<value>com/model/TZuoyes.hbm.xml</value></list>
+		</property>
+	</bean>
+	
+	
+	<!-- 后台的登录 -->
+	<bean id="loginService" class="com.service.loginService">
+		<property name="adminDAO">
+			<ref bean="TAdminDAO" />
+		</property>
+		<property name="stuDAO">
+			<ref bean="TStuDAO" />
+		</property>
+		<property name="teaDAO">
+			<ref bean="TTeaDAO" />
+		</property>
+	</bean>
+	
+	
+	<bean id="indexAction" class="com.action.indexAction" scope="prototype">
+	    <property name="gonggaoDAO">
+			<ref bean="TGonggaoDAO" />
+		</property>
+	</bean>
+	
+	
+	<bean id="TAdminDAO" class="com.dao.TAdminDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="adminAction" class="com.action.adminAction" scope="prototype">
+		<property name="adminDAO">
+			<ref bean="TAdminDAO" />
+		</property>
+	</bean>
+	
+	<bean id="TTeaDAO" class="com.dao.TTeaDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="teaAction" class="com.action.teaAction" scope="prototype">
+		<property name="teaDAO">
+			<ref bean="TTeaDAO" />
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="TStuDAO" class="com.dao.TStuDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="stuAction" class="com.action.stuAction" scope="prototype">
+		<property name="stuDAO">
+			<ref bean="TStuDAO" />
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="TLiuyanDAO" class="com.dao.TLiuyanDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="liuyanAction" class="com.action.liuyanAction" scope="prototype">
+		<property name="liuyanDAO">
+			<ref bean="TLiuyanDAO" />
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="TGonggaoDAO" class="com.dao.TGonggaoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="gonggaoAction" class="com.action.gonggaoAction" scope="prototype">
+		<property name="gonggaoDAO">
+			<ref bean="TGonggaoDAO" />
+		</property>
+	</bean>
+	
+	<bean id="TDocDAO" class="com.dao.TDocDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="docAction" class="com.action.docAction" scope="prototype">
+		<property name="docDAO">
+			<ref bean="TDocDAO" />
+		</property>
+	</bean>
+	
+	
+	<bean id="TShipinDAO" class="com.dao.TShipinDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="shipinAction" class="com.action.shipinAction" scope="prototype">
+		<property name="shipinDAO">
+			<ref bean="TShipinDAO" />
+		</property>
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+	<bean id="TZuoyetDAO" class="com.dao.TZuoyetDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="zuoyetAction" class="com.action.zuoyetAction" scope="prototype">
+		<property name="zuoyetDAO">
+			<ref bean="TZuoyetDAO" />
+		</property>
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+	<bean id="TZuoyesDAO" class="com.dao.TZuoyesDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="zuoyesAction" class="com.action.zuoyesAction" scope="prototype">
+		<property name="zuoyesDAO">
+			<ref bean="TZuoyesDAO" />
+		</property>
+	</bean>
+	
+	
+	</beans>

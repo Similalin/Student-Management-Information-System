@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC   
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+     
+     
+<struts>
+    <package name="liu" extends="struts-default">
+        <global-results>
+            <result name="succeed">/common/succeed.jsp</result>
+            <result name="msg">/common/msg.jsp</result>
+        </global-results>
+        
+        <action name="upload" class="com.util.upload" method="upload">
+             <result name="success">/upload/upload_re.jsp</result>
+        </action>
+        
+        <action name="index" class="indexAction" method="index">
+            <result name="success">/qiantai/index.jsp</result>
+        </action>
+        
+        
+        
+        <action name="stuAdd" class="stuAction" method="stuAdd">
+        </action>
+        <action name="stuMana" class="stuAction" method="stuMana">
+            <result name="success">/admin/stu/stuMana.jsp</result>
+        </action>
+        <action name="stuDel" class="stuAction" method="stuDel">
+        </action>
+        <action name="stuEdit" class="stuAction" method="stuEdit">
+        </action>
+        
+        
+        
+        
+        
+        <action name="teaAdd" class="teaAction" method="teaAdd">
+        </action>
+        <action name="teaDel" class="teaAction" method="teaDel">
+        </action>
+        <action name="teaMana" class="teaAction" method="teaMana">
+            <result name="success">/admin/tea/teaMana.jsp</result>
+        </action>
+        <action name="teaEdit" class="teaAction" method="teaEdit">
+        </action>
+        
+        
+        <action name="liuyanAdd" class="liuyanAction" method="liuyanAdd">
+        </action>
+        <action name="liuyanMana" class="liuyanAction" method="liuyanMana">
+             <result name="success">/admin/liuyan/liuyanMana.jsp</result>
+        </action>
+        <action name="liuyanDel" class="liuyanAction" method="liuyanDel">
+        </action>
+        <action name="liuyanHuifu" class="liuyanAction" method="liuyanHuifu">
+        </action>
+        <action name="liuyanAll" class="liuyanAction" method="liuyanAll">
+             <result name="success">/qiantai/liuyan/liuyanAll.jsp</result>
+        </action>
+        <action name="liuyanDetail" class="liuyanAction" method="liuyanDetail">
+             <result name="success">/qiantai/liuyan/liuyanDetail.jsp</result>
+        </action>
+        
+        
+        
+        <action name="gonggaoAdd" class="gonggaoAction" method="gonggaoAdd">
+        </action>
+        <action name="gonggaoDel" class="gonggaoAction" method="gonggaoDel">
+        </action>
+        <action name="gonggaoMana" class="gonggaoAction" method="gonggaoMana">
+            <result>/admin/gonggao/gonggaoMana.jsp</result>
+        </action>
+        <action name="gonggaoDetail" class="gonggaoAction" method="gonggaoDetail">
+            <result>/admin/gonggao/gonggaoDetail.jsp</result>
+        </action>
+        <action name="gonggaoDetailQian" class="gonggaoAction" method="gonggaoDetailQian">
+            <result>/qiantai/gonggao/gonggaoDetailQian.jsp</result>
+        </action>
+        
+        
+        <action name="docAdd" class="docAction" method="docAdd">
+        </action>
+        <action name="docDel" class="docAction" method="docDel">
+        </action>
+        <action name="docMana" class="docAction" method="docMana">
+            <result name="success">/admin/doc/docMana.jsp</result>
+        </action>
+        <action name="docAll" class="docAction" method="docAll">
+            <result name="success">/qiantai/doc/docAll.jsp</result>
+        </action>
+        <action name="docDetailQian" class="docAction" method="docDetailQian">
+            <result name="success">/qiantai/doc/docDetailQian.jsp</result>
+        </action>
+        
+        
+        <action name="shipinAdd" class="shipinAction" method="shipinAdd">
+        </action>
+        <action name="shipinDel" class="shipinAction" method="shipinDel">
+        </action>
+        <action name="shipinMana" class="shipinAction" method="shipinMana">
+             <result>/admin/shipin/shipinMana.jsp</result>
+        </action>
+        <action name="shipinAll" class="shipinAction" method="shipinAll">
+             <result>/qiantai/shipin/shipinAll.jsp</result>
+        </action>
+        <action name="shipinDetailQian" class="shipinAction" method="shipinDetailQian">
+             <result>/qiantai/shipin/shipinDetailQian.jsp</result>
+        </action>
+        
+        
+        
+        
+        
+        
+        
+        
+        <action name="zuoyetAdd" class="zuoyetAction" method="zuoyetAdd">
+        </action>
+        <action name="zuoyetMine" class="zuoyetAction" method="zuoyetMine">
+             <result name="success">/admin/zuoyet/zuoyetMine.jsp</result>
+        </action>
+        <action name="zuoyetDel" class="zuoyetAction" method="zuoyetDel">
+        </action>
+        <action name="zuoyetAll" class="zuoyetAction" method="zuoyetAll">
+             <result name="success">/admin/zuoyet/zuoyetAll.jsp</result>
+        </action>
+        
+        
+        
+        
+        <action name="zuoyesAdd" class="zuoyesAction" method="zuoyesAdd">
+        </action>
+        <action name="zuoyesMine" class="zuoyesAction" method="zuoyesMine">
+             <result name="success">/admin/zuoyes/zuoyesMine.jsp</result>
+        </action>
+        <action name="zuoyesDel" class="zuoyesAction" method="zuoyesDel">
+        </action>
+        <action name="zuoyesMana" class="zuoyesAction" method="zuoyesMana">
+             <result name="success">/admin/zuoyes/zuoyesMana.jsp</result>
+        </action>
+        <action name="zuoyesHuifu" class="zuoyesAction" method="zuoyesHuifu">
+             <result name="success">/admin/zuoyes/zuoyesHuifu.jsp</result>
+        </action>
+    </package>
+</struts>

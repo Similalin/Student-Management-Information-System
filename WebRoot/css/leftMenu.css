@@ -1,0 +1,139 @@
+/* Layout ================================================================================ */
+/********** Navigation > */
+/*.navhead { background: url(../images/menuBG.gif) no-repeat scroll 0 0;background-repeat:no-repeat;background-position: 0px -80px;height: 40px; width: 160px; cursor: pointer; line-height: 40px; padding-left:16px;font-size: 14px; color:#FFFFFF; position:relative; z-index:801;}*/
+
+
+.left_bg
+{
+    width: 200px;
+    float: left;
+    margin: 0px 0px 0px 5px;
+    _margin-left: 2.5px;
+    overflow: hidden;
+}
+
+#Menu
+{
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    margin: 0px;
+}
+
+.navhead
+{
+    background: url(/javaxc/images/menuOpen.png) repeat-x scroll 0 0;
+    height: 29px;
+    width: 180px;
+    cursor: pointer;
+    line-height: 30px;
+    font-size: 13px;
+    font-family: @Î¢ÈíÑÅºÚ Arial;
+    color: Black;
+    color: Black;
+    margin: 0px 2px 0px 2px;
+    display: block;
+    text-align: left;
+    text-indent: 15px;
+    vertical-align: middle;
+}
+
+.navhead:hover
+{
+    color: Black;
+    text-decoration: none;
+    font-family: @Î¢ÈíÑÅºÚ Arial;
+}
+
+.navheadOpen
+{
+    background: url(/javaxc/images/menuClose.png) repeat-x scroll 0 0;
+    height: 29px;
+    width: 180px;
+    cursor: pointer;
+    line-height: 30px;
+    font-size: 13px;
+    font-family: @Î¢ÈíÑÅºÚ Arial;
+    font-weight: bold;
+    color: Black;
+    margin: 0px 2px 0px 2px;
+    display: block;
+    text-align: left;
+    text-indent: 15px;
+    vertical-align: middle;
+}
+.navheadOpen:hover
+{
+    color: Black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.navcontent
+{
+}
+.navcontent li
+{
+    width: 180px;
+    background-color: #a6d4ed;
+    background: url(/javaxc/images/line.png);
+    margin: 0px 6px 0px 2px;
+    padding-left: 0px;
+    text-align: left;
+    text-indent: 35px;
+    font-size: 13px;
+    font-family: @Î¢ÈíÑÅºÚ Arial;
+    color: Black;
+}
+
+.navcontent li:hover
+{
+    width: 180px;
+    background-color: #a6d4ed;
+    margin: 0px 6px 0px 2px;
+    padding-left: 0px;
+    text-align: left;
+    text-indent: 35px;
+    font-size: 13px;
+    font-family: @Î¢ÈíÑÅºÚ Arial;
+    color: Black;
+    background: url(/javaxc/images/menuitem.png);
+}
+
+
+
+
+.navcontent li a
+{
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+    font-family: @Î¢ÈíÑÅºÚ Arial;
+    color: Black;
+}
+.navcontent li a:hover
+{
+    color: Red;
+    text-decoration: none;
+    height: 24px;
+    line-height: 24px;
+    border: 1px;
+    border-bottom-color: Red;
+    font-family: @Î¢ÈíÑÅºÚ Arial;
+}
+.navcontent li:last-child
+{
+    height: 35px;
+}
+.navcontent a
+{
+    color: #000;
+    text-decoration: none;
+}
+.navcontent a:hover
+{
+    color: #FFFFFF;
+    text-decoration: none;
+}
